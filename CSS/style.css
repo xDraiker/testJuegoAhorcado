@@ -99,8 +99,35 @@ body::after{
     font-weight: 700;
 }
 .main{
+    position: relative;
     height: 75%;
-    /* overflow: hidden; */
+    overflow: hidden;
+}
+.main__menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: -50px;
+    padding: 5px 10px;
+    /* background-color: #ee82ee55; */
+    transform: translateX(0) translateY(0);
+    transition: transform 0.5s 0s;
+}
+.main__menu--active{
+    transform: translateX(0) translateY( 50px );
+    transition: transform 0.5s 1s;
+}
+.menu__item{
+    width: 40px;
+    border-radius: 50%;
+    border-top: .5px solid #f0f0f0;
+    border-left: .5px solid #f0f0f0;
+    background-color: #f0f0f033;
+    backdrop-filter: blur( 5px );
+    cursor: pointer;
 }
 .main__div{
     display: flex;
@@ -111,18 +138,30 @@ body::after{
     width: 300%;
     height: 100%;
     left: -100%;
-    background-color: #ff33;
-    /* !-- */
-    /* transform: translateX( calc(100% / 3) ) translateY(0);  */
-    /* transform: translateX( calc(100% / 3 * -1 ) ) translateY(0);  */
-    /* transform: translateX( calc(100% / 3) ) translateY( 100% ); */
-    /* transform: translateX( calc(100% / 3) ) translateY( -100% ); */
-    /* !-- */
+    /* background-color: #ff33; */
+    transform: translateX(0) translateY(0);
+    transition: transform 1s 0.5s;
+}
+.div__config{
+    transform: translateX( calc(100% / 3) ) translateY(0); 
+    transition: transform 1s 0s; 
+}
+.div__config--add{
+    transform: translateX( calc(100% / 3) ) translateY( 100% );
+    transition: transform 1s 0s; 
+}
+.div__config--remove{
+    transform: translateX( calc(100% / 3) ) translateY( -100% );
+    transition: transform 1s 0s; 
+}
+.div__game{
+    transform: translateX( calc(100% / 3 * -1 ) ) translateY(0);
+    transition: transform 1s 0s; 
 }
 .main__section{
     width: calc(100% / 3);
     height: 100%;
-    background-color: #ff634755;
+    /* background-color: #ff634755; */
 }
 .main__section--config{
     display: flex;
@@ -135,9 +174,38 @@ body::after{
 .config__item{
     width: 100%;
     height: calc(100% / 3);
-    background-color: #4dff4799;
+    /* background-color: #4dff4799; */
 }
-
+.button{
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    font-family: 'Heebo', sans-serif;
+    border: 2px solid #f5f5f5;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.main__section--index,
+.config__item--index{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+.index__button--game{
+    border: none;
+    border-top: .5px solid #f0f0f0;
+    border-left: .5px solid #f0f0f0;
+    background-color: #f0f0f033;
+    backdrop-filter: blur( 5px );
+}
 .footer{
     padding: 5px;
     text-align: center;

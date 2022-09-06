@@ -15,20 +15,30 @@
         <h1 class="header__h1">Juego del ahorcado</h1>
     </header>
     <main class="body__item main">
-        <div class="main__div">
+        <div class="main__menu" id="mainMenu">
+            <img src="SVG/arrow.svg" id="arrow" class="menu__item">
+            <img src="SVG/repeatArrow.svg" id="repeatArrow" class="menu__item">
+        </div>
+        <div class="main__div" id="focus">
             <section class="main__section main__section--config">
                 <section class="config__item config__item--add">
 
                 </section>
                 <section class="config__item config__item--index">
-
+                    <form action="#" class="form form__config--index">
+                        <input type="button" value=" Añadir " class="button config__button--add" id="buttonA">
+                        <input type="button" value="Eliminar" class="button config__button--remove" id="buttonE">
+                    </form>
                 </section>
                 <section class="config__item config__item--remove">
 
                 </section>
             </section>
             <section class="main__section main__section--index">
-
+                <form action="#" class="form form__index">
+                    <input type="button" value="Iniciar partida" class="button index__button--game" id="buttonG">
+                    <input type="button" value="Configuración" class="button index__button--config" id="buttonC">
+                </form>
             </section>
             <section class="main__section main__section--game"> 
             
@@ -40,5 +50,6 @@
             <img class="link__github" src="SVG/github.svg" alt="icono_github">
           </a>
     </footer>
+    <script src="Js/main.js"></script>
 </body>
 </html>
