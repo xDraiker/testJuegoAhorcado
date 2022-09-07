@@ -22,7 +22,11 @@
         <div class="main__div" id="focus">
             <section class="main__section main__section--config">
                 <section class="config__item config__item--add">
-
+                    <span class="config__add--alert" id="addConfigAlert">Lapalabra deve de tener una longitud de mm caracteres y no contener acentos</span>
+                    <form action="#" class="form form__config--add" id="formConfigAdd">
+                        <input type="text" class="text_add" name="textAdd">
+                        <input type="button" value=" + " class="button button__add" id="buttonAdd">
+                    </form>
                 </section>
                 <section class="config__item config__item--index">
                     <form action="#" class="form form__config--index">
@@ -31,7 +35,13 @@
                     </form>
                 </section>
                 <section class="config__item config__item--remove">
-
+                    <!-- <form action="#" class="form form__config--remove">
+                        <select name="palabras" id="palabras" class="form__select">
+                            <option selected disabled>***********</option>
+                            <option>Patata</option>
+                        </select>
+                        <input type="button" value=" - " class="button button__remove" id="buttonRemove"> -->
+                    </form>
                 </section>
             </section>
             <section class="main__section main__section--index">
@@ -50,6 +60,6 @@
             <img class="link__github" src="SVG/github.svg" alt="icono_github">
           </a>
     </footer>
-    <script src="Js/main.js"></script>
+    <script src="Js/main.js" type="module"></script>
 </body>
 </html>
