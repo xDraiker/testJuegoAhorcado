@@ -22,9 +22,9 @@
         <div class="main__div" id="focus">
             <section class="main__section main__section--config">
                 <section class="config__item config__item--add">
-                    <span class="config__add--alert" id="addConfigAlert">Lapalabra deve de tener una longitud de mm caracteres y no contener acentos</span>
+                    <span class="config__add--alert" id="addConfigAlert"></span>
                     <form action="#" class="form form__config--add" id="formConfigAdd">
-                        <input type="text" class="text_add" name="textAdd">
+                        <input type="text" class="text_add" name="textAdd" id="textAdd">
                         <input type="button" value=" + " class="button button__add" id="buttonAdd">
                     </form>
                 </section>
@@ -35,12 +35,11 @@
                     </form>
                 </section>
                 <section class="config__item config__item--remove">
-                    <!-- <form action="#" class="form form__config--remove">
-                        <select name="palabras" id="palabras" class="form__select">
-                            <option selected disabled>***********</option>
-                            <option>Patata</option>
-                        </select>
-                        <input type="button" value=" - " class="button button__remove" id="buttonRemove"> -->
+                    <form action="#" class="form form__config--remove" id="formConfigRemove">
+                        <div class="config__remove--select" id="configRemoveSelect">
+                            
+                        </div>
+                        <button class="button config__button--remove" id="buttonE"> - </button>
                     </form>
                 </section>
             </section>
