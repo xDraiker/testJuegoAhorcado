@@ -6,7 +6,9 @@ if(!localStorage.getItem('palabras')){
 }
 let palabrasDB = JSON.parse(localStorage.getItem('palabras'));
 const boxSelect = document.getElementById('configRemoveSelect');
+const sectionGame = document.getElementById('sectionGame');
 const fragmentList = document.createDocumentFragment();
+const fragmentLetters = document.createDocumentFragment();
 
 const validar = palabra => {
     const regex = /[á-źÁ-Ź]/g;
@@ -62,7 +64,34 @@ const removeItem = () => {
     }
     localStorage.setItem('palabras', JSON.stringify(palabrasDB));
 };
+const palabraRandom = () => {
+    let subindice = Math.round(Math.random() * (palabrasDB.arrayPalabras.length - 1));
+    
+    return palabrasDB.arrayPalabras[subindice];
+};
+const mostrarPalabra = palabra => {
+    let arrayString = [...palabra];
+
+    const letters = document.createElement('div');
+    letters.setAttribute('id','lettersContine');
+    letters.classList.add('game__letters');
+
+    for(let i = 0; i < arrayString.length; i++){
+        const letter = document.createElement('span');
+        letter.classList.add('letter');
+        letter.textContent = `${arrayString[i]}`;
+
+        fragmentLetters.appendChild(letter);
+    }
+    
+    letters.appendChild(fragmentLetters);
+    sectionGame.appendChild(letters);
+};
+const eliminarPalabra = () => {
+    const palabra = document.getElementById('lettersContine')
+    palabra.remove()
+}
 
 //Descomentando la linea de abajo puedes borrar el local storage Daniel del futuro
 // localStorage.removeItem('palabras');
-export { validar, noRepeat, addPalabra, createList, removeList, removeItem };
+export { validar, noRepeat, addPalabra, createList, removeList, removeItem, palabraRandom, mostrarPalabra, eliminarPalabra };

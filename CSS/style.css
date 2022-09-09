@@ -218,7 +218,8 @@ body::after{
 .main__section--index,
 .config__item--index,
 .config__item--add,
-.config__item--remove{
+.config__item--remove,
+.main__section--game{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -302,6 +303,51 @@ body::after{
     background-color: #f0f0f033;
     backdrop-filter: blur( 5px );
 }
+.main__section--game{
+    flex-flow: row wrap;
+    padding: 50px;
+    border: 1px solid #f00;
+}
+.game__ahorcado,
+.game__ads{
+    width: 50%;
+    height: 70%;
+    border: 1px solid #0051ff;
+}
+.ahorcado__canvas{
+    width: 100%;
+    height: 100%;
+    background-color: #0051ff55;
+}
+.game__letters{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    border: 1px solid #0051ff;
+}
+.letter{
+    display: inline-block;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    scale: 1 0.1;
+    background-color: #f0f0f0;
+}
+.letter--active{
+    scale: 1 1;
+    background-color: #f0f0f000;
+    transition: scale .5s 0s,
+                background-color .5s .5s;
+}
+/* .letter:hover{
+    scale: 1 1;
+    background-color: #f0f0f000;
+    transition: scale .5s 0s,
+                background-color .5s .5s;
+} */
 .footer{
     padding: 5px;
     text-align: center;
